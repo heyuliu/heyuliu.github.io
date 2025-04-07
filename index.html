@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" NorthMountain 摄影作品、程序项目和个人分享。">
+    <link rel="icon" href="/images/my_avator.jpg">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>North Mountain | 独立汽车摄影师  </title>
+</head>
+<body>
+  <!-- 导航部分的页面  -->
+  <div class="container-fulid nav-box">
+    <nav class="navbar navbar-dark bgc-night fixed-top p-3 navbar-scrolled">
+      <div class="container">
+          <!-- Hamburger Menu Button (Left) -->
+          <button class="navbar-toggler border-0 menu-button text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+              <span><i class="fas fa-bars white-icon"></i></span>
+          </button>
+  
+          <!-- Brand Logo (Center) -->
+          <a class="navbar-brand text-white creepster-regular mx-auto" href="northmountain.html" style="font-size: 30px;">
+              <h2>North Mountain</h2>
+          </a>
+  
+          <!-- Right Icons (Search, User, Cart) -->
+          <div class="d-flex align-items-center">
+              <a href="#" class="text-white me-3 search-icon"><i class="fas fa-search"></i></a>
+              <a href="#" class="text-white me-3 account-icon" target="_self"><i class="fas fa-user"></i></a>
+              <a href="#" class="text-white"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+  
+          <!-- Offcanvas Menu (Unchanged) -->
+          <div class="offcanvas offcanvas-start bg-black text-white w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <!-- Close Button -->
+              <button type="button" class="btn-close btn-close-white position-absolute top-0 start-0 m-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              
+              <div class="offcanvas-body d-flex flex-column align-items-start p-5">
+                  <!-- Navigation Menu -->
+                  <ul class="navbar-nav w-100">
+                      <li class="nav-item">
+                          <a class="nav-link text-white fs-5 fw-bold" href="photos.html">摄影</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-white fs-5 fw-bold" href="#">LifeVision</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-white fs-5 fw-bold" href="#aboutme">关于我</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-white fs-5 fw-bold text-muted" href="https://www.douyin.com/user/self">赠品 [已结束]</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-white fs-5 fw-bold" href="#">摄影比赛 [已结束]</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </nav>
+  </div>
+  <div class="search-bar bgc-night py-5" id="searchBar">
+      <div class="container d-flex align-items-center justify-content-between serach-box">
+          <div class="search-label">
+              <div>
+              <input type="text" class=" mt-2 search-ipt" placeholder="Search...">
+              <button class="search-btn">搜索 </button>
+              </div>
+          </div>
+          <a href="#" class="text-white close-search"><i class="fas fa-times"></i></a>
+      </div>
+  </div>
+  <div class="login-section py-5" id="loginSection">
+    <div class="container position-relative login-box">
+        <!-- Close Button -->
+        <button class="close-login btn btn-link text-white position-absolute top-0 end-0 m-5" aria-label="Close">
+            <i class="fas fa-times fa-2x"></i>
+        </button>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <form>
+                  <h1 class="text-center text-white mb-4">Login</h1>
+
+                    <div class="mb-3">
+                        <input type="email" class="form-control bg-transparent text-white border-white" placeholder="Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control bg-transparent text-white border-white" placeholder="Password" required>
+                    </div>
+                    <div class="text-center mb-3">
+                        <a href="#" class="text-warning text-decoration-none">Forgot Password?</a>
+                    </div>
+                    <div class="d-grid mb-3">
+                        <button type="submit" class="btn btn-outline-light">Sign In</button>
+                    </div>
+                    <div class="text-center mb-4">
+                        <a href="#" class="text-warning text-decoration-none">Create Account</a>
+                    </div>
+                </form>
+                <!-- Social Media Buttons -->
+                <div class="d-grid gap-2 mb-3">
+                    <a href="#" class="btn btn-warning text-dark">Shop My Equipment</a>
+                    <a href="#" class="btn btn-warning text-dark">Watch Me on YouTube</a>
+                    <a href="#" class="btn btn-warning text-dark">Follow Me on Instagram</a>
+                </div>
+                <!-- Social Media Icons -->
+                <div class="text-center mb-4">
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-youtube fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- 个人作品swiper展示 -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="/images/heyu_mountain-11.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="/images/heyu_mountain-6.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="/images/heyu_mountain-8.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="/images/heyu_mountain-9.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="/images/heyu_mountain-5.jpg" alt=""></div>
+    </div>
+    <!-- 添加分页 Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation -->
+    <!-- <div class="swiper-button-prev"></div> -->
+    <!-- <div class="swiper-button-next"></div> -->
+  </div>
+
+  <!-- 关于我页面 -->
+  <div class="p-5 bgc-night" id="about">
+    <div class="container border-0">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-lg">
+              <div class="container-cixi creepster-regular">
+                <div class="text-block">A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+                <div class="text-block">T A I N   T H E   M O U N T A I N  T H E   M O U N T A I N  T H E  M O U N T A I N</div>
+                <div class="text-block">T H E   M O U N T A I N &nbsp; T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+                <div class="text-block">A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+                <div class="text-block">U N T A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+                <div class="text-block">M O U N  T H E   M O U N T A I N  T H E  M  O  U N T A   T H E  M O U N T A I N</div>
+                <div class="text-block">T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  T H E  M O U N T A I N</div>
+                <div class="text-block">M O U N  T H E   M O U N T A I N  T H E  M O U N T A I N   T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+
+            </div>
+            </div>
+            <div class="col-md p-5">
+                <h2>Here About ME</h2>
+                <p class="lead wave-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore obcaecati maxime accusamus quas architecto quaerat officiis? Molestiae, numquam nemo dolorem quo repellendus consectetur quidem, veniam blanditiis excepturi quibusdam dignissimos voluptate.
+                </p>
+                <p class="wave-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla rem, minus blanditiis accusamus ullam nam fugiat quo sint vel voluptatibus voluptate! Reiciendis numquam, vero sequi reprehenderit veniam repellat accusamus quam.</p>
+                <a href="" class="btn btn-light">了解更多</a>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- 卡片作品链接 -->
+  <div class="p-5 bgc-night">
+    <div class="container">
+      <div class="card-group border-0 gap-5 p-3">
+        <!-- 第一张卡片 -->
+        <div class="card border-0 h-100 d-flex flex-column">
+          <img src="images/heyu_mountain-11.jpg" class="card-img-top rounded-0" alt="...">
+          <div class="card-body bgc-night d-flex flex-column flex-grow-1">
+            <h5 class="card-title">汽车摄影</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <div class="card-footer mt-auto">
+            <button type="button" class="btn btn-outline-warning">Warning</button>
+          </div>
+        </div>
+      
+        <!-- 第二张卡片 -->
+        <div class="card border-0 h-100 d-flex flex-column">
+          <img src="/images/heyu_mountain-10.jpg" class="card-img-top" alt="...">
+          <div class="card-body bgc-night d-flex flex-column flex-grow-1">
+            <h5 class="card-title">城市摄影</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer mt-auto">
+            <button type="button" class="btn btn-outline-warning">Warning</button>
+          </div>
+        </div>
+      
+        <!-- 第三张卡片 -->
+        <div class="card border-0 h-100 d-flex flex-column">
+          <img src="/images/heyu_mountain-12.jpg" class="card-img-top rounded-0" alt="...">
+          <div class="card-body bgc-night d-flex flex-column flex-grow-1">
+            <h5 class="card-title">人文摄影</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          <div class="card-footer mt-auto">
+            <button type="button" class="btn btn-outline-warning">Warning</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- 音乐|电影分享页面-->
+  <div class="container-fulid bgc-night">
+    <div class="container bgc-night">
+      <div class="accordion accordion-flush bgc-night" id="accordionFlushExample">
+          <div class="accordion-item ">
+            <h2 class="accordion-header creepster-regular text-left">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  M o v i e &nbsp;&nbsp;L i s t
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <h2 class="text-center creepster-regula">HERE SOME FAVORITE MOVIES </h2>      
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-evenly gy-5 pt-5 pb-5 gx-5 ">
+                <div class="col-auto ">
+                  <div class="card h-100 d-flex flex-row rounded-0 border-0">
+                    <img src="/images/film2.webp" class="h-100" style="object-fit: cover; width: 120px;" alt="...">
+                    <div class="card-body bgc-night">
+                        <h5 class="card-title">Call Me by Your Name</h5>
+                        <p class="card-text">我们应该始终认真对待自己的感受，而不是隐藏或保护自己.成为你想成为的人，在别人的凝视中找到自己，发现他或她的不同之处</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 d-flex flex-row rounded-0 border-0">
+                    <img src="/images/film1.webp" class="h-100" style="object-fit: cover; width: 120px;" alt="...">
+                    <div class="card-body bgc-night">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 d-flex flex-row rounded-0 border-0">
+                    <img src="/images/film3.webp" class="h-100" style="object-fit: cover; width: 120px;" alt="...">
+                    <div class="card-body bgc-night">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 d-flex flex-row rounded-0 border-0">
+                    <img src="/images/film4.webp" class="h-100" style="object-fit: cover; width: 120px;" alt="...">
+                    <div class="card-body bgc-night">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 d-flex flex-row rounded-0 border-0">
+                    <img src="/images/film5.webp" class="h-100" style="object-fit: cover; width: 120px;" alt="...">
+                    <div class="card-body bgc-night">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 d-flex flex-row rounded-0 border-0">
+                    <img src="/images/film6.jpg" class="h-100" style="object-fit: cover; width: 120px;" alt="...">
+                    <div class="card-body bgc-night">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+              </div></div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header creepster-regular shadow-0">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                M u s i c &nbsp;&nbsp;L i s t
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">  
+                <h2 class="text-center creepster-regula">HERE SOME  FAVORITE MUSIC </h2>      
+
+                <div class="row justify-content-center row-cols-lg-7 pt-5 pb-5 gy-4 gx-4">
+                <div class="col-auto">
+                  <div class="card h-100 border-0 rounded-0 mx-auto" style="width: 160px; height: 160px; overflow: hidden;">
+                    <img src="/images/music-1.jpg" class="w-100 h-80" style="object-fit: cover;" alt="...">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 border-0 rounded-0 mx-auto" style="width: 160px; height: 160px; overflow: hidden;">
+                    <img src="/images/music-1.jpg" class="w-100 h-80" style="object-fit: cover;" alt="...">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 border-0 rounded-0 mx-auto" style="width: 160px; height: 160px; overflow: hidden;">
+                    <img src="/images/music-1.jpg" class="w-100 h-80" style="object-fit: cover;" alt="...">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 border-0 rounded-0 mx-auto" style="width: 160px; height: 160px; overflow: hidden;">
+                    <img src="/images/music-1.jpg" class="w-100 h-80" style="object-fit: cover;" alt="...">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 border-0 rounded-0 mx-auto" style="width: 160px; height: 160px; overflow: hidden;">
+                    <img src="/images/music-1.jpg" class="w-100 h-80" style="object-fit: cover;" alt="...">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 border-0 rounded-0 mx-auto" style="width: 160px; height: 160px; overflow: hidden;">
+                    <img src="/images/music-1.jpg" class="w-100 h-80" style="object-fit: cover;" alt="...">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 border-0 rounded-0 mx-auto" style="width: 160px; height: 160px; overflow: hidden;">
+                    <img src="/images/music-1.jpg" class="w-100 h-80" style="object-fit: cover;" alt="...">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 border-0 rounded-0 mx-auto" style="width: 160px; height: 160px; overflow: hidden;">
+                    <img src="/images/music-1.jpg" class="w-100 h-80" style="object-fit: cover;" alt="...">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 border-0 rounded-0 mx-auto" style="width: 160px; height: 160px; overflow: hidden;">
+                    <img src="/images/music-1.jpg" class="w-100 h-80" style="object-fit: cover;" alt="...">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 border-0 rounded-0 mx-auto" style="width: 160px; height: 160px; overflow: hidden;">
+                    <img src="/images/music-1.jpg" class="w-100 h-80" style="object-fit: cover;" alt="...">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="card h-100 border-0 rounded-0 mx-auto" style="width: 160px; height: 160px; overflow: hidden;">
+                    <img src="/images/music-1.jpg" class="w-100 h-80" style="object-fit: cover;" alt="...">
+                  </div>
+                </div>
+        
+              </div></div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header creepster-regular">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Accordion Item #3
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+            </div>
+          </div>
+      </div>
+  </div>
+  </div>
+
+  <!-- 空盒子占位 -->
+  <div class="p-5  bgc-night">
+    <div class="container"></div>
+  </div>
+
+  <!-- 底部部分-->
+  <div class="bgc-night" id="foot">
+    <div class="container pt-5 pb-5 foot-box">
+      <div class="foot-box-lf">
+        <span class="inline-block">
+          <p class="text-left  bgc-night">&nbsp;&nbsp;&nbsp; © 2025 NorthMountain.</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+          </span><br><br>
+          <span class="inline-block">&nbsp;&nbsp;<box-icon color="white" name='walk' animation='spin' rotate='270' ></box-icon>&nbsp;&nbsp;&nbsp;<p class="creepster-regular">K E E P &nbsp; W a l k i n g ! ! !</p> &nbsp; &nbsp;<box-icon color="white" name='walk' animation='spin' rotate='270' ></box-icon></span>
+      </div>
+      <div class="foot-box-rg">
+        <div class="other-contact">
+          <div class="item">
+            <a href="https://www.instagram.com/liuheyu_7/" class=" contact-link"></a>
+          </div>
+          <div class="item">
+            <a href="https://www.douyin.com/user/self" class="contact-link4"></a>
+          </div>
+          <div class="item">
+              <a href="#" class="toggleLink contact-link1"></a>
+              <div class="box"><img src="/images/wc.qr.jpg" alt="Image 2"></div>
+          </div>
+          <div class="item">
+              <a href="#" class="toggleLink contact-link2"></a>
+              <div class="box"><img src="/images/qq.qr.jpg" alt="Image 3"></div>
+          </div>
+          <div class="item">
+              <a href="#" class="toggleLink contact-link3"></a>
+              <div class="box email-box">
+                <div class="email-box-list"><hr>
+                  <img src="/images/gmail.webp" alt="">
+                  <button class="email-btn"><a href="mailto:"></a></button><hr>
+                  <img src="/images/gmail.webp" alt="">
+                  <button class="email-btn"><a href="mailto:3074476155@qq.com" target="_self">QQemail</a></button><hr>
+                  <img src="/images/gmail.webp" alt="">
+                  <button class="email-btn"><a href="mailto:"></a></button><hr>
+                  <img src="/images/gmail.webp" alt="">
+                  <button class="email-btn"><a href="mailto:"></a></button><hr>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="js\script.js"></script>
+</body>
+</html> 
