@@ -143,7 +143,6 @@
     text-align: center;
     margin: auto;
 }
-
 .product-image {
     width: 100%;
     height: 500px;
@@ -151,18 +150,15 @@
     background-position: center;
     transition: background-image 0.3s ease;
 }
-
 .product-card h2 {
     font-size: 1.2rem;
     margin: 10px 0;
 }
-
 .rating {
     color: yellow;
     font-size: 1rem;
     margin-bottom: 10px;
 }
-
 /* 自定义按钮样式 */
 .btn-custom {
     width: 160px;
@@ -182,7 +178,6 @@
     overflow: hidden;
     z-index: 1;
 }
-
 .btn-custom::before {
     content: '';
     position: absolute;
@@ -194,14 +189,13 @@
     z-index: -1;
     transition: 0.5s;
 }
-
 .btn-custom:hover::before {
     width: 100%;
 }
-
 .btn-custom:hover {
     color: white;
 }
+
 
 /* 响应式调整图片高度 */
 @media (max-width: 576px) {

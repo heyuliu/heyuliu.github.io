@@ -12,7 +12,7 @@ body{
     font-size: 14px;
     overflow-x: hidden;
     width: 100vw;
-    color: white;
+    color: white!important;
     background-color: black;
     overflow-x: hidden;
 }
@@ -22,7 +22,7 @@ img{
 a{
     list-style: none !important;
     text-decoration: none !important;
-    color: white;
+    color: white!important;
 }
 
 /* 引入的字体 */
