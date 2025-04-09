@@ -270,4 +270,107 @@ function myPlugin({ swiper, extendParams, on }) {
                 });
             }
         });
+
+
+//暂存展示页面的js
+        // 获取元素
+        const photoItems = document.querySelectorAll('.photo-item');
+        const photoOverlay = document.getElementById('photoOverlay');
+        const fullImage = document.getElementById('fullImage');
+        const prevArrow = document.getElementById('prevArrow');
+        const nextArrow = document.getElementById('nextArrow');
+        
+        let currentIndex = -1; // 当前显示图片的索引
+        const photos = Array.from(photoItems).map(item => item.querySelector('img').src); // 所有图片的 src 数组
+
+        // 显示图片函数
+        function showImage(index) {
+            if (index >= 0 && index < photos.length) {
+                currentIndex = index;
+                fullImage.src = photos[currentIndex];
+                photoOverlay.classList.add('show');
+            }
+        }
+
+        // 为每张图片添加点击事件
+        photoItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                showImage(index);
+            });
+        });
+
+        // 点击背景关闭
+        photoOverlay.addEventListener('click', (e) => {
+            if (e.target === photoOverlay) {
+                photoOverlay.classList.remove('show');
+                currentIndex = -1; // 重置索引
+            }
+        });
+
+        // 导航箭头点击事件
+        prevArrow.addEventListener('click', (e) => {
+            e.stopPropagation(); // 阻止事件冒泡到 overlay
+            if (currentIndex > 0) {
+                showImage(currentIndex - 1);
+            }
+        });
+
+        nextArrow.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (currentIndex < photos.length - 1) {
+                showImage(currentIndex + 1);
+            }
+        });
+
+        // 键盘控制
+        document.addEventListener('keydown', (e) => {
+            if (!photoOverlay.classList.contains('show')) return;
+
+            if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                showImage(currentIndex - 1);
+            } else if (e.key === 'ArrowRight' && currentIndex < photos.length - 1) {
+                showImage(currentIndex + 1);
+            } else if (e.key === 'Escape') {
+                photoOverlay.classList.remove('show');
+                currentIndex = -1;
+            }
+        });
+
+        // 鼠标左右键控制
+        photoOverlay.addEventListener('mousedown', (e) => {
+            // 只允许在图片本身点击左右键切换
+            if (e.target === fullImage) {
+                if (e.button === 0 && currentIndex > 0) { // 左键
+                    showImage(currentIndex - 1);
+                } else if (e.button === 2 && currentIndex < photos.length - 1) { // 右键
+                    showImage(currentIndex + 1);
+                }
+            }
+        });
+        // 禁用右键默认菜单
+        photoOverlay.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+
+
+        // 回到顶部按钮的
+        //添加事件监听
+        document.addEventListener("DOMContentLoaded",function(){
+            const backToTopButton = document.getElementById("backToTop");
+            function toggleButtonVisibility(){
+                const scrollHeight = document.documentElement.scrollHeight;//页面总高度
+                const viewportHeight = window.innerHeight;//视口高度
+                const scrollPosition = window.scrollY;//当前位置
+                if(scrollHeight>=2*viewportHeight && scrollPosition>800){
+                backToTopButton.style.display = "block";
+                }else{
+                backToTopButton.style.display = "none";
+                 }
+            }
+            window.addEventListener("scroll",toggleButtonVisibility);
+            toggleButtonVisibility();
+        });
+        function scrollToTop(){
+            window.scrollTo({top:0,behavior:'smooth'});
+        }
     
