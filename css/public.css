@@ -14,7 +14,7 @@ body{
     width: 100vw;
     color: white;
     background-color: black;
-    overflow-y: scroll !important;
+    overflow-x: hidden;
 }
 img{
     cursor: pointer;
@@ -61,7 +61,7 @@ text-align: center;
 border-top: none!important;
 }
 .btn-outline-warning{
-width: 300px;
+width: 200px;
 border: 1px solid orange!important;
 /* outline: none; */
 border-radius: none!important;

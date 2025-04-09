@@ -15,6 +15,24 @@ window.onload = function() {
         }, 500); // 与CSS transition时间匹配
     }, 2000); // 开屏显示1.5秒
 }
+
+document.querySelectorAll('.product-image').forEach(image => {
+    const defaultImage = image.getAttribute('data-default');
+    const hoverImage = image.getAttribute('data-hover');
+
+    // 设置默认背景图片
+    image.style.backgroundImage = `url(${defaultImage})`;
+
+    // 鼠标悬停时切换图片
+    image.addEventListener('mouseenter', () => {
+        image.style.backgroundImage = `url(${hoverImage})`;
+    });
+
+    // 鼠标离开时恢复默认图片
+    image.addEventListener('mouseleave', () => {
+        image.style.backgroundImage = `url(${defaultImage})`;
+    });
+});
 function myPlugin({ swiper, extendParams, on }) {
     extendParams({
       debugger: false,

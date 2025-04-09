@@ -9,7 +9,7 @@
         font-size: 30px; /* 与你的style属性一致 */
     }
     .navbar-toggler {
-        width: 120px;
+        width: 110px;
         height: 42px;
         border: none!important;
         border-radius: 50px!important;
@@ -56,7 +56,7 @@
     }
     
     .navbar-toggler:hover .menu-text {
-        transform: translateX(-10px);
+        transform: translateX(-6px);
     }
     
     .navbar-toggler:hover .bx-menu {
@@ -73,10 +73,14 @@
     width: 100vw;
     height: 100vh;
     background-image: url("/images/my-wallaper.jpg") ;
-    background-size: 100vw 100vh;
+    background-size: 100vw 100%;
     object-fit: cover;
     background-repeat: no-repeat;
+    .about-box{
+        margin-top: 50px!important;
+    }
 }
+
 
 // swiper
 .swiper {
@@ -123,6 +127,94 @@
     }
 }
 
+/* 标题样式 */
+.header .warning {
+    font-size: 1.5rem;
+    color: yellow;
+    margin: 0 10px;
+}
+
+/* 产品卡片样式 */
+.product-card {
+    width: 80%;
+    background: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+}
+
+.product-image {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
+}
+
+.product-card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.rating {
+    color: yellow;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* 自定义按钮样式 */
+.btn-custom {
+    width: 160px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    background: transparent;
+    color: black;
+    background-color: yellow;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-custom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #FFBF00;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.btn-custom:hover::before {
+    width: 100%;
+}
+
+.btn-custom:hover {
+    color: white;
+}
+
+/* 响应式调整图片高度 */
+@media (max-width: 576px) {
+    .product-image {
+        height: 300px; /* 手机端图片高度缩小 */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 1024px) {
+    .product-image {
+        height: 350px; /* 平板端图片高度 */
+    }
+}
 .inline-block span, .inline-block p {
     display: inline-block;
     vertical-align: middle; /* 可选：垂直居中对齐 */
