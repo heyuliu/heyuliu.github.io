@@ -13,7 +13,7 @@ window.onload = function() {
         setTimeout(() => {
             splash.style.display = 'none';
         }, 500); // 与CSS transition时间匹配
-    }, 3000); // 开屏显示1.5秒
+    }, 2000); // 开屏显示1.5秒
 }
 function myPlugin({ swiper, extendParams, on }) {
     extendParams({
@@ -85,7 +85,7 @@ function myPlugin({ swiper, extendParams, on }) {
           spaceBetween: 0,
           centeredSlides: true,
           autoplay: {
-          delay: 5000,
+          delay: 4000,
           disableOnInteraction: false,
           },
         modules: [myPlugin],
@@ -97,17 +97,19 @@ function myPlugin({ swiper, extendParams, on }) {
         },
         // Enable debugger
         debugger: true,
+        allowTouchMove: false, // 禁用触摸滑动
+        // simulateTouch: false,
       });
 
       // 监听窗口大小变化实现导航栏背景效果显示
-      window.addEventListener('scroll', function () {
-        let navbar = document.querySelector('.navbar');
-        if (window.scrollY > 100) {
-          navbar.classList.add('navbar-scrolled');
-        } else {
-          navbar.classList.remove('navbar-scrolled');
-        }
-      });
+    //   window.addEventListener('scroll', function () {
+    //     let navbar = document.querySelector('.navbar');
+    //     if (window.scrollY > 100) {
+    //       navbar.classList.add('navbar-scrolled');
+    //     } else {
+    //       navbar.classList.remove('navbar-scrolled');
+    //     }
+    //   });
       //将文字分割并包裹在标签内
       // 获取所有 wave-text 元素
       document.querySelectorAll('.wave-text').forEach(textElement => {
@@ -254,39 +256,11 @@ function myPlugin({ swiper, extendParams, on }) {
         } else {
             console.warn('Search bar elements not found. Please check the DOM.');
         }
+    })
     
-        // Login Section Toggle
-        const accountIcon = document.querySelector('.account-icon');
-        const loginSection = document.querySelector('#loginSection');
-        const closeLogin = document.querySelector('.close-login');
+
     
-        if (accountIcon && loginSection && closeLogin) {
-            // Toggle login section when account icon is clicked
-            accountIcon.addEventListener('click', (e) => {
-                e.preventDefault(); // Prevent default link behavior
-                loginSection.style.display = loginSection.style.display === 'block' ? 'none' : 'block';
-            });
-    
-            // Close login section when close button is clicked
-            closeLogin.addEventListener('click', () => {
-                loginSection.style.display = 'none';
-            });
-        } else {
-            console.warn('Login section elements not found. Please check the DOM.');
-        }
-    
-        // Existing scroll event listener for navbar background (if present)
-        const navbar = document.querySelector('.navbar');
-            if (navbar) {
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 100) {
-                        navbar.classList.add('navbar-scrolled');
-                    } else {
-                        navbar.classList.remove('navbar-scrolled');
-                    }
-                });
-            }
-        });
+
 
 
 //暂存展示页面的js

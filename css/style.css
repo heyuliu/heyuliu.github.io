@@ -1,156 +1,87 @@
 @charset "UTF-8";
-.navbar:hover {
-  background-color: black;
-}
-
 .navbar {
   position: fixed;
   width: 100%;
   z-index: 1000;
   transition: background 0.3s ease-in-out;
   background: transparent;
+  /* 自定义menu-box（如果需要） */
+  /* 自定义bx-menu图标 */
+  /* Hover效果 */
 }
 
-/* 滚动后的导航栏 */
-.navbar-scrolled {
-  background: black !important;
+.navbar .navbar-brand h2 {
+  margin: 0;
+  font-size: 30px;
+  /* 与你的style属性一致 */
 }
 
-/* Search Bar Styles */
-.search-bar {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  width: 100%;
-  height: 240px;
-  z-index: 999;
-  border-bottom: 1px solid #333;
-}
-
-.search-bar .serach-box {
-  margin-top: 80px;
-}
-
-.search-bar .search-ipt {
-  width: 80vw;
-  height: 50px;
-  border-radius: 16px;
-  background-color: #000000;
-  color: #fff !important;
+.navbar .navbar-toggler {
+  width: 120px;
+  height: 42px;
   border: none !important;
-  padding-left: 20px;
-}
-
-.search-bar .search-btn {
-  background-color: #f1c40f;
-  color: #000;
-  border-radius: 16px;
-  padding: 10px 20px;
-  margin: 0px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  border: none;
-}
-
-.search-bar .search-label h3 {
-  font-size: 36px;
-  font-weight: bold;
-}
-
-.search-bar .close-search {
-  font-size: 24px;
-  color: #fff;
-}
-
-.search-bar .close-search :hover {
-  color: #f1c40f;
-}
-
-.login-section {
-  background-color: black;
+  border-radius: 50px !important;
+  background-color: #1B1B1B !important;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .navbar-toggler .menu-text {
+  font-size: 14px;
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar .navbar-toggler .menu-box {
+  margin-left: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #CD7F32;
+}
+
+.navbar .navbar-toggler .bx-menu {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  background-color: #CD7F32;
   display: none;
-  /* Hidden by default */
-  min-height: 100vh;
-  padding-top: 200px;
+  transform: scale(0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.login-box {
-  padding-top: 100px;
+.navbar .navbar-toggler:hover {
+  background-color: #333 !important;
 }
 
-.login-section h1 {
-  font-size: 36px;
-  font-weight: bold;
-  text-transform: uppercase;
+.navbar .navbar-toggler:hover .menu-text {
+  transform: translateX(-10px);
 }
 
-.form-control {
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  font-size: 16px;
+.navbar .navbar-toggler:hover .bx-menu {
+  display: inline-block;
+  transform: scale(1);
+  animation: scale 1s ease;
 }
 
-.form-control::placeholder {
-  color: #fff;
-  opacity: 0.7;
+.navbar .navbar-toggler:hover .menu-box {
+  display: none;
 }
 
-.form-control:focus {
-  background-color: transparent;
-  border-color: #f1c40f;
-  color: #fff;
-  box-shadow: none;
-}
-
-.btn-outline-light {
-  border-color: #fff;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.btn-outline-light:hover {
-  background-color: #fff;
-  color: #1a1a1a;
-}
-
-.text-warning {
-  color: #f1c40f !important;
-}
-
-.text-warning:hover {
-  color: #d4ac0d !important;
-}
-
-.btn-warning {
-  background-color: #f1c40f;
-  color: #1a1a1a;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.btn-warning:hover {
-  background-color: #d4ac0d;
-  color: #1a1a1a;
-}
-
-/* Close Button for Login Section */
-.close-login {
-  font-size: 24px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.close-login:hover {
-  color: #f1c40f;
-}
-
-/* Social Media Icons */
-.login-section .fa-2x {
-  font-size: 2rem;
+#about {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/images/my-wallaper.jpg");
+  background-size: 100vw 100vh;
+  object-fit: cover;
+  background-repeat: no-repeat;
 }
 
 .swiper {
@@ -519,7 +450,7 @@
   position: relative;
   width: 100%;
   height: 400px;
-  border-radius: 20px;
+  border-radius: 6px;
   box-shadow: 30px orange !important;
   background-color: yellow;
   overflow: hidden;
@@ -639,23 +570,11 @@
 
 /* 主内容样式 */
 .main-content {
-  padding: 20px;
+  padding: 0px;
   opacity: 0;
   transition: opacity 0.3s ease-in;
 }
 
 .main-content.visible {
   opacity: 1;
-}
-
-.underdog-regular {
-  font-family: "Underdog", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.permanent-marker-regular {
-  font-family: "Permanent Marker", cursive;
-  font-weight: 600;
-  font-style: normal;
 }

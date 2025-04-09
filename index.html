@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>North Mountain | 独立汽车摄影师  </title>
 </head>
 <body>
+  <!-- 开屏画面 -->
   <div class="splash-screen" id="splashScreen">
     <div class="open-box">
         <h1 class="animate__animated animate__flip permanent-marker-regular" >NOTH MOUNATIN</h1>
@@ -28,23 +31,15 @@
   <div class="container-fulid nav-box" >
     <nav class="navbar navbar-dark bgc-night fixed-top p-3 navbar-scrolled">
       <div class="container">
-          <!-- Hamburger Menu Button (Left) -->
-          <button class="navbar-toggler border-0 menu-button text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
-              <span><i class="fas fa-bars white-icon"></i></span>
-          </button>
-  
-          <!-- Brand Logo (Center) -->
-          <a class="navbar-brand text-white creepster-regular mx-auto" href="index.html" style="font-size: 30px;">
-              <h2>North Mountain</h2>
+          <a class="navbar-brand text-white creepster-regular" href="index.html">
+              <h1>North Mountain</h1>
           </a>
-  
-          <!-- Right Icons (Search, User, Cart) -->
-          <div class="d-flex align-items-center">
-              <a href="#" class="text-white me-3 search-icon"><i class="fas fa-search"></i></a>
-              <a href="#" class="text-white me-3 account-icon" target="_self"><i class="fas fa-user"></i></a>
-              <a href="#" class="text-white"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-  
+          <button class="navbar-toggler border-0 menu-button text-white navbar-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+            <span class="menu-text">MENU</span>
+            <span class="menu-box"></span>
+            <i class='bx bx-menu'></i>
+          </button>
+
           <!-- Offcanvas Menu (Unchanged) -->
           <div class="offcanvas offcanvas-start bg-black text-white w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
               <!-- Close Button -->
@@ -74,7 +69,7 @@
       </div>
     </nav>
   </div>
-  <div class="search-bar bgc-night py-5" id="searchBar">
+  <!-- <div class="search-bar bgc-night py-5" id="searchBar">
       <div class="container d-flex align-items-center justify-content-between serach-box">
           <div class="search-label">
               <div>
@@ -84,49 +79,35 @@
           </div>
           <a href="#" class="text-white close-search"><i class="fas fa-times"></i></a>
       </div>
-  </div>
-  <div class="login-section py-5" id="loginSection">
-    <div class="container position-relative login-box">
-        <!-- Close Button -->
-        <button class="close-login btn btn-link text-white position-absolute top-0 end-0 m-5" aria-label="Close">
-            <i class="fas fa-times fa-2x"></i>
-        </button>
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-4">
-                <form>
-                  <h1 class="text-center text-white mb-4">Login</h1>
+  </div> -->
 
-                    <div class="mb-3">
-                        <input type="email" class="form-control bg-transparent text-white border-white" placeholder="Email" required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="password" class="form-control bg-transparent text-white border-white" placeholder="Password" required>
-                    </div>
-                    <div class="text-center mb-3">
-                        <a href="#" class="text-warning text-decoration-none">Forgot Password?</a>
-                    </div>
-                    <div class="d-grid mb-3">
-                        <button type="submit" class="btn btn-outline-light">Sign In</button>
-                    </div>
-                    <div class="text-center mb-4">
-                        <a href="#" class="text-warning text-decoration-none">Create Account</a>
-                    </div>
-                </form>
-                <!-- Social Media Buttons -->
-                <div class="d-grid gap-2 mb-3">
-                    <a href="#" class="btn btn-warning text-dark">Shop My Equipment</a>
-                    <a href="#" class="btn btn-warning text-dark">Watch Me on YouTube</a>
-                    <a href="#" class="btn btn-warning text-dark">Follow Me on Instagram</a>
-                </div>
-                <!-- Social Media Icons -->
-                <div class="text-center mb-4">
-                    <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-youtube fa-2x"></i></a>
-                </div>
-            </div>
-        </div>
+    <!-- 关于我页面 -->
+    <div class="p-5 bgc-night" id="about">
+      <div class="container border-0">
+          <div class="row align-items-center justify-content-between">
+              <div class="col-lg">
+                <div class="container-cixi creepster-regular">
+                  <div class="text-block">A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+                  <div class="text-block">T A I N   T H E   M O U N T A I N  T H E   M O U N T A I N  T H E  M O U N T A I N</div>
+                  <div class="text-block">T H E   M O U N T A I N &nbsp; T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+                  <div class="text-block">A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+                  <div class="text-block">U N T A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+                  <div class="text-block">M O U N  T H E   M O U N T A I N  T H E  M  O  U N T A   T H E  M O U N T A I N</div>
+                  <div class="text-block">T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  T H E  M O U N T A I N</div>
+                  <div class="text-block">M O U N  T H E   M O U N T A I N  T H E  M O U N T A I N   T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+              </div>
+              </div>
+              <div class="col-md p-5">
+                  <h2>Here About ME</h2>
+                  <p class="lead wave-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore obcaecati maxime accusamus quas architecto quaerat officiis? Molestiae, numquam nemo dolorem quo repellendus consectetur quidem, veniam blanditiis excepturi quibusdam dignissimos voluptate.
+                  </p>
+                  <p class="wave-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla rem, minus blanditiis accusamus ullam nam fugiat quo sint vel voluptatibus voluptate! Reiciendis numquam, vero sequi reprehenderit veniam repellat accusamus quam.</p>
+                  <a href="" class="btn btn-light">了解更多</a>
+              </div>
+          </div>
+      </div>
     </div>
-  </div>
 
   <!-- 个人作品swiper展示 -->
   <div class="swiper">
@@ -144,34 +125,7 @@
     <!-- <div class="swiper-button-next"></div> -->
   </div>
 
-  <!-- 关于我页面 -->
-  <div class="p-5 bgc-night" id="about">
-    <div class="container border-0">
-        <div class="row align-items-center justify-content-between">
-            <div class="col-lg">
-              <div class="container-cixi creepster-regular">
-                <div class="text-block">A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
-                <div class="text-block">T A I N   T H E   M O U N T A I N  T H E   M O U N T A I N  T H E  M O U N T A I N</div>
-                <div class="text-block">T H E   M O U N T A I N &nbsp; T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
-                <div class="text-block">A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
-                <div class="text-block">U N T A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
-                <div class="text-block">M O U N  T H E   M O U N T A I N  T H E  M  O  U N T A   T H E  M O U N T A I N</div>
-                <div class="text-block">T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  T H E  M O U N T A I N</div>
-                <div class="text-block">M O U N  T H E   M O U N T A I N  T H E  M O U N T A I N   T H E  M O U N T A I N  T H E  M O U N T A I N</div>
 
-            </div>
-            </div>
-            <div class="col-md p-5">
-                <h2>Here About ME</h2>
-                <p class="lead wave-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore obcaecati maxime accusamus quas architecto quaerat officiis? Molestiae, numquam nemo dolorem quo repellendus consectetur quidem, veniam blanditiis excepturi quibusdam dignissimos voluptate.
-                </p>
-                <p class="wave-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla rem, minus blanditiis accusamus ullam nam fugiat quo sint vel voluptatibus voluptate! Reiciendis numquam, vero sequi reprehenderit veniam repellat accusamus quam.</p>
-                <a href="" class="btn btn-light">了解更多</a>
-            </div>
-        </div>
-    </div>
-  </div>
 
   <!-- 卡片作品链接 -->
   <div class="p-5 bgc-night">
@@ -421,7 +375,6 @@
       </div>
     </div>
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
