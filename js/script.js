@@ -1,3 +1,20 @@
+// 控制开屏动画的显示时间
+window.onload = function() {
+    setTimeout(() => {
+        const splash = document.getElementById('splashScreen');
+        const content = document.getElementById('mainContent');
+        
+        // 隐藏开屏
+        splash.classList.add('hidden');
+        // 显示主内容
+        content.classList.add('visible');
+        
+        // 完全隐藏开屏元素（可选）
+        setTimeout(() => {
+            splash.style.display = 'none';
+        }, 500); // 与CSS transition时间匹配
+    }, 3000); // 开屏显示1.5秒
+}
 function myPlugin({ swiper, extendParams, on }) {
     extendParams({
       debugger: false,
@@ -373,4 +390,5 @@ function myPlugin({ swiper, extendParams, on }) {
         function scrollToTop(){
             window.scrollTo({top:0,behavior:'smooth'});
         }
-    
+
+

@@ -602,3 +602,60 @@
 .foot-box .foot-box-lf {
   width: 50%;
 }
+
+/* 开屏容器样式 */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: yellow;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+/* 为 p 标签添加一些样式以确保动画更明显 */
+/* .splash-screen p {
+            font-size: 1em;
+            font-weight: bold;
+            color: #333;
+        } */
+.open-box h1 {
+  font-size: 4em;
+}
+
+/* 隐藏时的状态 */
+.splash-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 主内容样式 */
+.main-content {
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.main-content.visible {
+  opacity: 1;
+}
+
+.underdog-regular {
+  font-family: "Underdog", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
