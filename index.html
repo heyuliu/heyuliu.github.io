@@ -29,19 +29,19 @@
 
   <!-- 导航部分的页面  -->
   <div class="container-fulid nav-box" >
-    <nav class="navbar navbar-dark bgc-night fixed-top p-3 navbar-scrolled">
+    <nav class="navbar navbar-dark bgc-night fixed-top p-3 ">
       <div class="container">
           <a class="navbar-brand text-white creepster-regular" href="index.html">
               <h1>North Mountain</h1>
           </a>
-          <button class="navbar-toggler border-0 menu-button text-white navbar-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+          <button class="navbar-toggler border-0 menu-button text-white navbar-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" id="navbar-toggler">
             <span class="menu-text">MENU</span>
             <span class="menu-box"></span>
             <i class='bx bx-menu'></i>
           </button>
 
           <!-- Offcanvas Menu (Unchanged) -->
-          <div class="offcanvas offcanvas-start bg-black text-white w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas offcanvas-start bg-black text-white w-100 h-50" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
               <!-- Close Button -->
               <button type="button" class="btn-close btn-close-white position-absolute top-0 start-0 m-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               
@@ -49,16 +49,16 @@
                   <!-- Navigation Menu -->
                   <ul class="navbar-nav w-100">
                       <li class="nav-item">
-                          <a class="nav-link text-white fs-5 fw-bold" href="visual.html">Visual photos</a>
+                          <a class="nav-link text-white fs-5 fw-bold" href="visual.html">Visual Photos</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link text-white fs-5 fw-bold" href="#">LifeVision</a>
+                          <a class="nav-link text-white fs-5 fw-bold" href="#">Music&Film</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link text-white fs-5 fw-bold" href="#aboutme">关于我</a>
+                          <a class="nav-link text-white fs-5 fw-bold" href="#">NorthMountain Blog</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link text-white fs-5 fw-bold text-muted" href="https://www.douyin.com/user/self">赠品 [已结束]</a>
+                          <a class="nav-link text-white fs-5 fw-bold" href="#">Contact Me</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link text-white fs-5 fw-bold" href="#">摄影比赛 [已结束]</a>
@@ -69,45 +69,33 @@
       </div>
     </nav>
   </div>
-  <!-- <div class="search-bar bgc-night py-5" id="searchBar">
-      <div class="container d-flex align-items-center justify-content-between serach-box">
-          <div class="search-label">
-              <div>
-              <input type="text" class=" mt-2 search-ipt" placeholder="Search...">
-              <button class="search-btn">搜索 </button>
-              </div>
-          </div>
-          <a href="#" class="text-white close-search"><i class="fas fa-times"></i></a>
-      </div>
-  </div> -->
-
     <!-- 关于我页面 -->
-    <div class="p-5 bgc-night" id="about">
-      <div class="container border-0">
-          <div class="row align-items-center justify-content-between about-box">
-              <div class="col-lg">
-                <div class="container-cixi creepster-regular">
-                  <div class="text-block">A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
-                  <div class="text-block">T A I N   T H E   M O U N T A I N  T H E   M O U N T A I N  T H E  M O U N T A I N</div>
-                  <div class="text-block">T H E   M O U N T A I N &nbsp; T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
-                  <div class="text-block">A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
-                  <div class="text-block">U N T A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
-                  <div class="text-block">M O U N  T H E   M O U N T A I N  T H E  M  O  U N T A   T H E  M O U N T A I N</div>
-                  <div class="text-block">T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  T H E  M O U N T A I N</div>
-                  <div class="text-block">M O U N  T H E   M O U N T A I N  T H E  M O U N T A I N   T H E  M O U N T A I N  T H E  M O U N T A I N</div>
-              </div>
-              </div>
-              <div class="col-md p-5">
-                  <h2>Here About ME</h2>
-                  <p class="lead wave-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore obcaecati maxime accusamus quas architecto quaerat officiis? Molestiae, numquam nemo dolorem quo repellendus consectetur quidem, veniam blanditiis excepturi quibusdam dignissimos voluptate.
-                  </p>
-                  <p class="wave-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla rem, minus blanditiis accusamus ullam nam fugiat quo sint vel voluptatibus voluptate! Reiciendis numquam, vero sequi reprehenderit veniam repellat accusamus quam.</p>
-                  <a href="" class="btn btn-light">了解更多</a>
-              </div>
-          </div>
-      </div>
+  <div class="p-5 bgc-night" id="about">
+    <div class="container border-0">
+        <div class="row align-items-center justify-content-between about-box">
+            <div class="col-lg">
+              <div class="container-cixi creepster-regular">
+                <div class="text-block">A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+                <div class="text-block">T A I N   T H E   M O U N T A I N  T H E   M O U N T A I N  T H E  M O U N T A I N</div>
+                <div class="text-block">T H E   M O U N T A I N &nbsp; T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+                <div class="text-block">A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+                <div class="text-block">U N T A I N  T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+                <div class="text-block">M O U N  T H E   M O U N T A I N  T H E  M  O  U N T A   T H E  M O U N T A I N</div>
+                <div class="text-block">T H E   M O U N T A I N  T H E  M O U N T A I N  T H E  T H E  M O U N T A I N</div>
+                <div class="text-block">M O U N  T H E   M O U N T A I N  T H E  M O U N T A I N   T H E  M O U N T A I N  T H E  M O U N T A I N</div>
+            </div>
+            </div>
+            <div class="col-md p-5">
+                <h2>Here About ME</h2>
+                <p class="lead wave-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore obcaecati maxime accusamus quas architecto quaerat officiis? Molestiae, numquam nemo dolorem quo repellendus consectetur quidem, veniam blanditiis excepturi quibusdam dignissimos voluptate.
+                </p>
+                <p class="wave-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla rem, minus blanditiis accusamus ullam nam fugiat quo sint vel voluptatibus voluptate! Reiciendis numquam, vero sequi reprehenderit veniam repellat accusamus quam.</p>
+                <a href="" class="btn btn-light">了解更多</a>
+            </div>
+        </div>
     </div>
+  </div>
 
   <!-- 个人作品swiper展示 -->
   <div class="swiper">
@@ -162,50 +150,42 @@
 
   <!-- 卡片作品链接 -->
   <div class="p-5 bgc-night">
-    <div class="container">
-      <div class="card-group border-0 gap-5 p-3">
-        <!-- 第一张卡片 -->
-        <div class="card border-0 h-100 d-flex flex-column">
-          <img src="images/heyu_mountain-11.jpg" class="card-img-top rounded-0" alt="...">
-          <div class="card-body bgc-night d-flex flex-column flex-grow-1">
-            <h5 class="card-title">汽车摄影</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card-footer mt-auto">
-            <button type="button" class="btn btn-outline-warning">Warning</button>
-          </div>
-        </div>
-      
-        <!-- 第二张卡片 -->
-        <div class="card border-0 h-100 d-flex flex-column">
-          <img src="/images/heyu_mountain-10.jpg" class="card-img-top" alt="...">
-          <div class="card-body bgc-night d-flex flex-column flex-grow-1">
-            <h5 class="card-title">城市摄影</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          </div>
-          <div class="card-footer mt-auto">
-            <button type="button" class="btn btn-outline-warning">Warning</button>
+    <div class="container pt-5 pb-5" >
+      <h1 class="creepster-regular text-center">MY Portfolio</h1><br><br><br>
+      <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="/images/photos-36.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
           </div>
         </div>
-      
-        <!-- 第三张卡片 -->
-        <div class="card border-0 h-100 d-flex flex-column">
-          <img src="/images/heyu_mountain-12.jpg" class="card-img-top rounded-0" alt="...">
-          <div class="card-body bgc-night d-flex flex-column flex-grow-1">
-            <h5 class="card-title">人文摄影</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <div class="col">
+          <div class="card h-100 border-0">
+            <img src="/images/photos-37.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a short card.</p>
+            </div>
           </div>
-          <div class="card-footer mt-auto">
-            <button type="button" class="btn btn-outline-warning">Warning</button>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="/images/photos-38.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
           </div>
         </div>
       </div>
-      
     </div>
   </div>
 
   <!-- 音乐|电影分享页面-->
-  <div class="container-fulid bgc-night">
+  <div class="container-fulid bgc-night" id="music-film">
     <div class="container bgc-night">
       <div class="accordion accordion-flush bgc-night" id="accordionFlushExample">
           <div class="accordion-item ">

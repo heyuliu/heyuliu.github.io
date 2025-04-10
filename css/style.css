@@ -218,6 +218,12 @@
     height: 300px;
     /* 手机端图片高度缩小 */
   }
+  .foot-box {
+    font-size: 12px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 1024px) {
@@ -228,9 +234,13 @@
 }
 
 .inline-block span, .inline-block p {
-  display: inline-block;
+  display: inline-block !important;
   vertical-align: middle;
   /* 可选：垂直居中对齐 */
+}
+
+#music-film {
+  display: none;
 }
 
 .accordion-item {
@@ -262,12 +272,6 @@
   /* 示例：浅绿色背景 */
   color: #ffffff;
   /* 示例：深绿色文字 */
-}
-
-/* 调整菜单侧边栏的高度 */
-.offcanvas {
-  height: 100vh !important;
-  /* 限制菜单高度 */
 }
 
 /* 其他登录方式 */
@@ -623,6 +627,7 @@
 
 .foot-box {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .foot-box .foot-box-lf {

@@ -2,7 +2,7 @@
     display: none;
 }
 body {
-    background-color: #1a1a1a;
+    background-color: #100f0f;
     color: #fff;
     overflow-x: hidden;
 }
@@ -11,7 +11,7 @@ a{
 }
 /* visual及导航栏样式 */
 .visual {
-    background-color: #1a1a1a;
+    background-color: #100f0f;
     width: 100vw;
     height: 42vh;
     font-size: 16px;
@@ -54,12 +54,15 @@ a{
 
 .nav-link {
     width: 100%; /* 填充整个 nav-item */
-    color: #fff;
     padding: 5px 15px;
     display: block; /* 确保链接占满宽度 */
     position: relative;
     z-index: 1; /* 确保文字在伪元素之上 */
     transition: color 0.3s ease; /* 平滑过渡文字颜色 */
+    width: 100%; /* 填充整个 nav-item */
+    color: #cfbcbca1;
+    padding: 0px 15px 2px 0px;
+    display: block; /* 确保链接占满宽度 */
 }
 
 /* 尾迹效果 */
@@ -81,14 +84,7 @@ a{
 
 .nav-link:hover {
     background-color: #918a8a;
-    color: #000; /* 调整 hover 时的文字颜色 */
-}
-
-.nav-link {
-    width: 100%; /* 填充整个 nav-item */
-    color: #fff;
-    padding: 0px 15px 2px 0px;
-    display: block; /* 确保链接占满宽度 */
+    color: #ffffff; /* 调整 hover 时的文字颜色 */
 }
 
 

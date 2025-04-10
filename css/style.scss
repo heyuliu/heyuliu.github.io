@@ -202,6 +202,12 @@
     .product-image {
         height: 300px; /* 手机端图片高度缩小 */
     }
+    .foot-box{
+        font-size: 12px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 1024px) {
@@ -210,10 +216,13 @@
     }
 }
 .inline-block span, .inline-block p {
-    display: inline-block;
+    display: inline-block!important;
     vertical-align: middle; /* 可选：垂直居中对齐 */
 }
 
+#music-film{
+    display: none;
+}
 // 手风琴
 .accordion-item {
     background-color: #000000; /* 示例：白色背景 */
@@ -236,10 +245,7 @@
     }
 }
 
-/* 调整菜单侧边栏的高度 */
-.offcanvas {
-    height: 100vh !important; /* 限制菜单高度 */
-}
+
 
 /* 其他登录方式 */
 .other-contact {
@@ -556,6 +562,7 @@
     .foot-box-lf{
         width: 50%;
     }
+    flex-wrap: wrap;
 }
 
 

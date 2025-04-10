@@ -13,7 +13,7 @@ window.onload = function() {
         setTimeout(() => {
             splash.style.display = 'none';
         }, 500); // 与CSS transition时间匹配
-    }, 2000); // 开屏显示1.5秒
+    }, 1800); // 开屏显示1.5秒
 }
 
 document.querySelectorAll('.product-image').forEach(image => {
@@ -97,37 +97,48 @@ function myPlugin({ swiper, extendParams, on }) {
     });
   }
 
-      // 初始化swiper
-      var swiper = new Swiper('.swiper', {
-        // Install Plugin To Swiper
-          spaceBetween: 0,
-          centeredSlides: true,
-          autoplay: {
-          delay: 4000,
-          disableOnInteraction: false,
-          },
-        modules: [myPlugin],
-        speed:2000,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        // Enable debugger
-        debugger: true,
-        allowTouchMove: false, // 禁用触摸滑动
-        // simulateTouch: false,
-      });
+// 初始化swiper
+var swiper = new Swiper('.swiper', {
+// Install Plugin To Swiper
+    spaceBetween: 0,
+    centeredSlides: true,
+    autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+    },
+modules: [myPlugin],
+speed:2000,
+loop: true,
+pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+},
+// Enable debugger
+debugger: true,
+allowTouchMove: false, // 禁用触摸滑动
+// simulateTouch: false,
+});
 
-      // 监听窗口大小变化实现导航栏背景效果显示
-    //   window.addEventListener('scroll', function () {
-    //     let navbar = document.querySelector('.navbar');
-    //     if (window.scrollY > 100) {
-    //       navbar.classList.add('navbar-scrolled');
-    //     } else {
-    //       navbar.classList.remove('navbar-scrolled');
-    //     }
-    //   });
+// Offcanvas 功能
+const navbarToggler = document.querySelector('.navbar-toggler');
+const offcanvasMenu = document.getElementById('offcanvasNavbar');
+const offcanvasInstance = new bootstrap.Offcanvas(offcanvasNavbar);
+
+// 阻止事件冒泡
+navbarToggler.addEventListener('click', (event) => {
+    event.stopPropagation();
+});
+
+offcanvasMenu.addEventListener('click', (event) => {
+    event.stopPropagation();
+});
+
+// 点击页面其他地方隐藏 Offcanvas
+document.addEventListener('click', (event) => {
+    if (!offcanvasNavbar.contains(event.target) && event.target !== navbarToggler) {
+        offcanvasInstance.hide();
+    }
+});
       //将文字分割并包裹在标签内
       // 获取所有 wave-text 元素
       document.querySelectorAll('.wave-text').forEach(textElement => {

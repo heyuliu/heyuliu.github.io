@@ -24,7 +24,11 @@ a{
     text-decoration: none !important;
     color: white!important;
 }
-
+.card-img-top {
+    height: 300px!important; /* 设置图片固定高度 */
+    object-fit: cover; /* 按比例裁剪填充 */
+    object-position: center; /* 居中对齐 */
+}
 /* 引入的字体 */
 .creepster-regular {
     font-family: "Creepster", system-ui;
