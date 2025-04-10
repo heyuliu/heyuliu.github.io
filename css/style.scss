@@ -76,8 +76,10 @@
     background-size: 100vw 100%;
     object-fit: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
     .about-box{
         margin-top: 50px!important;
+        overflow: hidden;
     }
 }
 
@@ -197,28 +199,7 @@
 }
 
 
-/* 响应式调整图片高度 */
-@media (max-width: 576px) {
-    .product-image {
-        height: 300px; /* 手机端图片高度缩小 */
-    }
-    .foot-box{
-        font-size: 12px;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-    }
-}
 
-@media (min-width: 576px) and (max-width: 1024px) {
-    .product-image {
-        height: 350px; /* 平板端图片高度 */
-    }
-}
-.inline-block span, .inline-block p {
-    display: inline-block!important;
-    vertical-align: middle; /* 可选：垂直居中对齐 */
-}
 
 #music-film{
     display: none;
@@ -567,50 +548,74 @@
 
 
 
-        /* 开屏容器样式 */
-        .splash-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: yellow;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            z-index: 9999;
-            opacity: 1;
-            transition: opacity 0.5s ease-out;
-        }
-                /* 为 p 标签添加一些样式以确保动画更明显 */
-        /* .splash-screen p {
-            font-size: 1em;
-            font-weight: bold;
-            color: #333;
-        } */
-        .open-box h1{
-            font-size: 4em;
+/* 开屏容器样式 */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color: #1B1B1B;
+    background-color: yellow;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+.open-box h1{
+    font-size: 4em;
 
-        }
+}
 
-        /* 隐藏时的状态 */
-        .splash-screen.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
+/* 隐藏时的状态 */
+.splash-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
 
-        /* 主内容样式 */
-        .main-content {
-            padding: 0px;
-            opacity: 0;
-            transition: opacity 0.3s ease-in;
-        }
+/* 主内容样式 */
+.main-content {
+    padding: 0px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
 
-        .main-content.visible {
-            opacity: 1;
-        }
+.main-content.visible {
+    opacity: 1;
+}
 
+/* 响应式调整图片高度 */
+@media (max-width: 576px) {
+    .product-image {
+        height: 300px; /* 手机端图片高度缩小 */
+    }
+    .foot-box{
+        font-size: 12px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper {
+        width: 100vw;
+        height: 50vh;
+    }
+    #about{
+        width: 100vw;
+        height: 80vh;
+    }
+}
 
+@media (min-width: 576px) and (max-width: 1024px) {
+    .product-image {
+        height: 350px; /* 平板端图片高度 */
+    }
+}
+.inline-block span, .inline-block p {
+    display: inline-block!important;
+    vertical-align: middle; /* 可选：垂直居中对齐 */
+}
 
