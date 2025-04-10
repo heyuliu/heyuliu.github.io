@@ -351,34 +351,6 @@
   display: block;
 }
 
-.email-box {
-  width: 300px;
-  height: 400px;
-}
-
-.email-box .email-box-list {
-  width: 240px;
-  height: 300px;
-  margin: 50px auto;
-}
-
-.email-box img {
-  display: inline-block;
-  /* 或 block */
-  width: 30px;
-  /* 设置宽度 */
-  height: 30px;
-  /* 设置高度 */
-  background-size: cover;
-  /* 确保图片填充 */
-}
-
-.email-box .email-btn {
-  width: 200px;
-  height: 30px;
-  border: none;
-}
-
 .wave-text {
   font-size: 24px;
   color: #ffffff;
