@@ -13,7 +13,7 @@ window.onload = function() {
         setTimeout(() => {
             splash.style.display = 'none';
         }, 500); // 与CSS transition时间匹配
-    }, 1800); // 开屏显示1.5秒
+    }, 1500); // 开屏显示1.5秒
 }
 
 document.querySelectorAll('.product-image').forEach(image => {
