@@ -86,7 +86,8 @@
 }
 
 #about .about-box {
-  margin-top: 50px !important;
+  font-size: 1.2rem;
+  margin-top: 180px !important;
   overflow: hidden;
 }
 
@@ -352,7 +353,7 @@
 }
 
 .wave-text {
-  font-size: 24px;
+  font-size: 1.20rem;
   color: #ffffff;
   user-select: none;
 }
@@ -490,86 +491,6 @@
   border: none;
   cursor: pointer;
   background-color: yellow;
-}
-
-.container-cixi {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  border-radius: 6px;
-  box-shadow: 30px orange !important;
-  background-color: yellow;
-  overflow: hidden;
-  cursor: pointer;
-  background-size: 100%;
-  object-fit: cover;
-  /* 手动调整每个 text-block 的位置，模仿图片中的随机排列 */
-  /* 给每个字符添加 span 样式 */
-}
-
-.container-cixi .text-block {
-  position: absolute;
-  font-size: 24px;
-  box-shadow: 30px orange !important;
-  font-weight: bold;
-  letter-spacing: 1px;
-  white-space: pre;
-  /* 保持空格 */
-  transition: transform 0.1s ease;
-  /* 平滑过渡 */
-}
-
-.container-cixi .text-block:nth-child(1) {
-  top: 10px;
-  left: 10px;
-  /* transform: rotate(-5deg); */
-}
-
-.container-cixi .text-block:nth-child(2) {
-  top: 60px;
-  left: 20px;
-  /* transform: rotate(3deg); */
-}
-
-.container-cixi .text-block:nth-child(3) {
-  top: 110px;
-  left: 10px;
-  /* transform: rotate(-2deg); */
-}
-
-.container-cixi .text-block:nth-child(4) {
-  top: 160px;
-  left: 10px;
-  /* transform: rotate(5deg); */
-}
-
-.container-cixi .text-block:nth-child(5) {
-  top: 210px;
-  left: 20px;
-  /* transform: rotate(-3deg); */
-}
-
-.container-cixi .text-block:nth-child(6) {
-  top: 260px;
-  left: 10px;
-  /* transform: rotate(2deg); */
-}
-
-.container-cixi .text-block:nth-child(7) {
-  top: 310px;
-  left: 20px;
-  /* transform: rotate(2deg); */
-}
-
-.container-cixi .text-block:nth-child(8) {
-  top: 360px;
-  left: 10px;
-  /* transform: rotate(2deg); */
-}
-
-.container-cixi .text-block span {
-  display: inline-block;
-  transition: transform 0.1s ease;
 }
 
 .foot-box {
