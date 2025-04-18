@@ -81,7 +81,6 @@
   background-image: url("/images/my-wallaper.jpg");
   background-size: 100% 100%;
   object-fit: cover;
-  background-attachment: fixed;
   background-repeat: no-repeat;
   overflow: hidden;
   min-height: 100vh;
