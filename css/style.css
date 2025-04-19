@@ -289,7 +289,7 @@
   /* 设置高度 */
   background-size: cover;
   /* 确保图片填充 */
-  background-image: url("/images/wechat.png");
+  background-image: url("/images/wechat.jpg");
 }
 
 .other-contact .contact-link2 {
