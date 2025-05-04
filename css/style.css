@@ -410,8 +410,9 @@
   transition: opacity 0.5s ease-out;
 }
 
-.open-box h1 {
+.open-box h2 {
   font-size: 4em;
+  margin: 36px auto;
 }
 
 /* 隐藏时的状态 */
