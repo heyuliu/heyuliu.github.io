@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 无滚动条设计 */
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+    width: 100vw;
+    color: white!important;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+}
+img{
+    cursor: pointer;
+}
+a{
+    list-style: none !important;
+    text-decoration: none !important;
+    color: rgb(0, 0, 0);
+}
+ul,li{
+    list-style-type: none;
+}
+.card-img-top {
+    height: 300px!important; /* 设置图片固定高度 */
+    object-fit: cover; /* 按比例裁剪填充 */
+    object-position: center; /* 居中对齐 */
+}
+/* 引入的字体 */
+.creepster-regular {
+    font-family: "Creepster", system-ui;
+    font-weight: 400; /* Creepster只有400字重 */
+    font-style: normal;
+}
+.underdog-regular {
+    font-family: "Underdog", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    }
+.permanent-marker-regular {
+font-family: "Permanent Marker", cursive;
+font-weight: 600;
+font-style: normal;
+}
+
+/* 自定义全局使用 */
+.bgc-night{
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255) !important;
+}
+.font-clr-white{
+color: white;
+}
+.link-a{
+color: rgb(0, 0, 0);
+vertical-align: top;
+text-decoration: none;
+}
+.card-footer{
+background-color: white!important;
+text-align: center;
+border-top: none!important;
+}
+.btn-outline-warning{
+width: 200px;
+border: 1px solid orange!important;
+/* outline: none; */
+border-radius: none!important;
+}
+.btn-outline-warning:hover{
+color: white!important;
+}
+.white-icon {
+color: white;
+font-size: 30px;
+}

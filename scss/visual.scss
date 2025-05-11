@@ -1,0 +1,181 @@
+::-webkit-scrollbar{
+    display: none;
+}
+body {
+    background-color: #ffffff;
+    color: #a88e8e;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+}
+/* visual及导航栏样式 */
+.visual {
+    background-color: #100f0f;
+    width: 100vw;
+    height: 42vh;
+    font-size: 16px;
+    position: relative; /* 为 Logo 的绝对定位提供上下文 */
+    padding: 20px;
+}
+
+.visual-left {
+    width: 40vw;
+    justify-content: left;
+    align-items: start;
+}
+
+/* Logo 固定在左上角 */
+.visual-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+/* 导航栏右边的列表 */
+.navbar-nav {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: flex-end; /* 靠右对齐 */
+    width: 60vw; /* 列表整体宽度为 60vw */
+    margin-left: auto; /* 推到右侧 */
+}
+
+/* 每个 nav-item 的样式 */
+.nav-item {
+    width: 60vw; /* 每个 nav-item 宽度为 60vw */
+    height: 24px;
+    text-align: left; /* 文字靠右对齐 */
+    position: relative; /* 为伪元素提供定位上下文 */
+}
+
+.nav-link {
+    width: 100%; /* 填充整个 nav-item */
+    padding: 5px 15px;
+    display: block; /* 确保链接占满宽度 */
+    position: relative;
+    z-index: 1; /* 确保文字在伪元素之上 */
+    transition: color 0.3s ease; /* 平滑过渡文字颜色 */
+    width: 100%; /* 填充整个 nav-item */
+    color: #cfbcbca1;
+    padding: 0px 15px 2px 0px;
+    display: block; /* 确保链接占满宽度 */
+}
+
+/* 尾迹效果 */
+.nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* 默认宽度为 0 */
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); /* 渐变尾迹效果 */
+    transition: width 1.5s ease; /* 宽度过渡动画 */
+    z-index: 0; /* 伪元素在文字之下 */
+}
+
+.nav-item:hover::before {
+    width: 100%; /* hover 时宽度扩展到 100% */
+}
+
+.nav-link:hover {
+    background-color: #918a8a;
+    color: #ffffff; /* 调整 hover 时的文字颜色 */
+}
+
+
+
+/* 列表底部链接样式 */
+.nav-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 60vw; /* 与 nav-item 宽度一致 */
+
+}
+
+.nav-footer-link {
+    color: #ccc;
+    cursor: pointer;
+}
+
+.nav-footer-link:hover {
+    color: #fff;
+}
+
+/* 搜索输入框和关于板块 */
+.search-box, .about-box {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    width: 60vw; /* 与 nav-item 宽度一致 */
+}
+.search-box input {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.about-box p {
+    margin: 0;
+}
+
+/* 卡片样式 */
+.card {
+    background-color: transparent;
+    border: none;
+}
+
+.card-img-top {
+    border-radius: 10px;
+    object-fit: cover;
+    height: 300px;
+}
+
+.card-body {
+    padding: 10px 0;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .navbar-nav {
+        width: 100%; /* 小屏幕下宽度占满 */
+    }
+
+    .nav-item {
+        width: 100%; /* 小屏幕下宽度占满 */
+    }
+
+    .nav-footer {
+        width: 100%;
+    }
+
+    .search-box, .about-box {
+        width: 100%;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+}
