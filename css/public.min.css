@@ -15,7 +15,7 @@ body {
   font-size: 14px;
   overflow-x: hidden;
   width: 100vw;
-  color: white !important;
+  color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   overflow-x: hidden;
 }
@@ -96,3 +96,5 @@ ul, li {
   color: white;
   font-size: 30px;
 }
+
+/*# sourceMappingURL=public.min.css.map */
