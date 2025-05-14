@@ -2,10 +2,10 @@
     width: 80vw;
     margin: auto;
     margin-top: 16px;
-    border-bottom: 1px solid rgb(227, 216, 216);
+    border-bottom: 1px solid gray;
     }
     .header h1{
-    color: rgb(61, 54, 54);
+    color: black;
     }
     .nav{
     width: 80vw;
@@ -14,11 +14,13 @@
     display: flex;
     }
     .nav-item{
-    text-align: center;
+    padding: 12px 24px;
     }
     .nav-item>a{
-    display: block;
-    padding: 18px 36px;
+
+    text-align: center;
+    // display: inline-block;
+    // padding: 16px 36px 16px 36px;
     }
     .nav-item>a:hover{
     /* background-color:#3c3942; */
