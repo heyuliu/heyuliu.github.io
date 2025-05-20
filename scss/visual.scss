@@ -179,3 +179,8 @@ a{
         height: 200px;
     }
 }
+@media (max-width: 576px) {
+    .visual-brand{
+        display: none;
+    }
+}
