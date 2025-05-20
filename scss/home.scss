@@ -1,12 +1,12 @@
+// 导航栏
 .header{
     width: 80vw;
     margin: auto;
     margin-top: 16px;
     border-bottom: 1px solid gray;
-    }
     .header h1{
-    color: black;
-    }
+        color: black;
+        }
     .nav{
     width: 80vw;
     }
@@ -23,6 +23,7 @@
     // padding: 16px 36px 16px 36px;
     }
     .nav-item>a:hover{
+        text-decoration: underline;
     /* background-color:#3c3942; */
     color: rgb(107, 97, 97);
     }
@@ -43,19 +44,20 @@
     background-color: aliceblue;
     }
     .dropdown li a:hover{
-    background-color: #3c3942;
+    background-color: #b3abc2;
     color: white;
     }
     .nav-item:hover .dropdown{
     display: block;
     }
-    .content {
-    width: 80vw;
-    margin: 8vh auto;
-    overflow: hidden;
+}
     
-    }
-    .content-images{
+// 内容
+.content {
+width: 80vw;
+margin: 8vh auto;
+overflow: hidden;
+.content-images{
     width: 80vw;
     height: 33vw;
     margin: auto;
@@ -69,11 +71,16 @@
     .content-text{
     color: rgb(40, 36, 36,0.8);
     }
-    .foot{
-    width: 100vw;
-    }
-    .foot-info{
-    width: 80vw;
-    margin: 10vh auto;
-    }
+
+}
+
+
+// 尾
+.foot{
+width: 100vw;
+}
+.foot-info{
+width: 80vw;
+margin: 10vh auto;
+}
     
