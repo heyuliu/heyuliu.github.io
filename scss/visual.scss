@@ -83,7 +83,9 @@ a{
 .nav-item:hover::before {
     width: 100%; /* hover 时宽度扩展到 100% */
 }
-
+.nav-link{
+    padding: 0px 2px;
+}
 .nav-link:hover {
     background-color: #918a8a;
     color: #ffffff; /* 调整 hover 时的文字颜色 */

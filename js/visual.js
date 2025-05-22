@@ -25,3 +25,25 @@ document.addEventListener('click', (event) => {
         aboutBox.style.display = 'none';
     }
 });
+
+// 点击导航按钮切换板块
+function showPanel(panelId) {
+  // 移除所有板块和按钮的 active 类
+  document.querySelectorAll(".panel").forEach((panel) => {
+    panel.classList.remove("active");
+  });
+  document.querySelectorAll(".nav-button").forEach((button) => {
+    button.classList.remove("active");
+  });
+
+  // 为当前板块和按钮添加 active 类
+  document.getElementById(panelId).classList.add("active");
+  document
+    .querySelector(`a[onclick="showPanel('${panelId}')"]`)
+    .classList.add("active");
+}
+
+// 默认显示第一个板块
+showPanel("panel1");
+
+

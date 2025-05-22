@@ -7,10 +7,34 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/visual.min.css">
     <title>关于视觉作品</title>
+    <style>
+        .panel {
+            display: none;
+            padding: 20px;
+            /* border: 1px solid #ccc; */
+            /* border-radius: 4px; */
+        }
+        .panel.active {
+            display: block;
+        }
+        .nav-link.active {
+            background-color: #94979b;
+            color: white !important;
+            /* border-radius: 4px; */
+        }
+        .nav-link {
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        .nav-link:hover {
+            background-color: #a8bfd7;
+            /* border-radius: 4px; */
+        }
+    </style>
 </head>
 <body>
     <!-- 顶部导航栏 -->
-    <div class="visual">
+    <div class="visual bg-dark">
         <div class="container-fluid">
             <!-- 左边 Logo -->
             <div class="visual-left">
@@ -18,39 +42,36 @@
             </div>
             <!-- 右边列表链接 -->
             <div class="ms-auto">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">全部</a>
+                <ul class="navbar-nav d-flex flex-row flex-wrap">
+                    <li class="nav-item me-2">
+                        <a class="nav-link nav-button active" onclick="showPanel('panel1')" href="#">全部</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">汽车美图</a>
+                    <li class="nav-item me-2">
+                        <a class="nav-link nav-button" onclick="showPanel('panel2')" href="#">汽车摄影</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">平面设计</a>
+                    <li class="nav-item me-2">
+                        <a class="nav-link nav-button" onclick="showPanel('panel3')" href="#">城市摄影</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">插图</a>
+                    <li class="nav-item me-2">
+                        <a class="nav-link nav-button" onclick="showPanel('panel4')" href="#">自然摄影</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">摄影</a>
+                    <li class="nav-item me-2">
+                        <a class="nav-link nav-button" onclick="showPanel('panel5')" href="#">平面设计</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">视频</a>
-                    </li>
-                    <li class="nav-item">
+                    <li class="nav-item me-2">
                         <a class="nav-link" href="#">推荐</a>
-                    </li><br>
+                    </li>
                     <!-- 列表底部链接 -->
                     <li class="nav-footer mt-2">
                         <span class="nav-footer-link me-3" id="searchLink">搜索</span>
                         <span class="nav-footer-link" id="aboutLink">关于</span>
-                    </li><br>
+                    </li>
                     <!-- 搜索输入框 -->
-                    <li class="search-box" id="searchBox">
+                    <li class="search-box mt-2" id="searchBox" style="display: none;">
                         <input type="text" placeholder="搜索..." class="w-100">
                     </li>
                     <!-- 关于板块 -->
-                    <li class="about-box" id="aboutBox">
+                    <li class="about-box mt-2" id="aboutBox" style="display: none;">
                         <p>关于我们：这是一个展示视觉艺术作品的网页，汇集了来自全球的设计师和艺术家的作品。宗旨在积累审美</p>
                     </li>
                 </ul>
@@ -59,7 +80,7 @@
     </div>
 
     <!-- 图片展示区 -->
-    <div class="container mt-4">
+    <div class="container mt-4 panel active" id="panel1">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             <!-- 卡片 1 -->
             <div class="col">
@@ -123,11 +144,57 @@
             </div>
         </div>
     </div>
+    <div class="container mt-4 panel" id="panel2">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- 示例：汽车美图内容 -->
+            <div class="col">
+                <div class="card">
+                    <img src="/images/car1.jpg" class="card-img-top" alt="Car Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Luxury Car</h5>
+                        <p class="card-text">高端跑车摄影</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="/images/car2.jpg" class="card-img-top" alt="Car Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Classic Car</h5>
+                        <p class="card-text">复古汽车设计</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4 panel" id="panel3">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- 示例：平面设计内容 -->
+            <div class="col">
+                <div class="card">
+                    <img src="/images/design1.jpg" class="card-img-top" alt="Design 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Poster Design</h5>
+                        <p class="card-text">创意海报设计</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="/images/design2.jpg" class="card-img-top" alt="Design 2">
+                    <div class="card-body">
+                        <h5 class="card-title">UI/UX Mockup</h5>
+                        <p class="card-text">界面设计原型</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- 引入 Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
     <!-- 自定义脚本 -->
-    <script src="js/scripts.js"></script>
+    <script src="js/visual.js"></script>
 </body>
 </html>
