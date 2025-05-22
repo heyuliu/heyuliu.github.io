@@ -14,10 +14,9 @@
     display: flex;
     }
     .nav-item{
-    padding: 12px 24px;
+    padding: 8px 12px;
     }
     .nav-item>a{
-
     text-align: center;
     // display: inline-block;
     // padding: 16px 36px 16px 36px;
@@ -27,9 +26,7 @@
     /* background-color:#3c3942; */
     color: rgb(107, 97, 97);
     }
-    .nav-list a:first-child{
-    padding-left: 0px;
-    }
+
     .dropdown{
     display: none;
     position: absolute;
@@ -54,33 +51,41 @@
     
 // 内容
 .content {
-width: 80vw;
-margin: 8vh auto;
-overflow: hidden;
-.content-images{
     width: 80vw;
-    height: 33vw;
-    margin: auto;
-    }
-    .content-images img {
-    width: 80vw;
-    height: 33vw;
-    object-fit: cover; 
-    cursor: pointer;
-    }
-    .content-text{
-    color: rgb(40, 36, 36,0.8);
-    }
-
+    margin: 8vh auto;
+    overflow: hidden;
+    .content-images{
+        width: 80vw;
+        height: 33vw;
+        margin: auto;
+        }
+        .content-images img {
+        width: 80vw;
+        height: 33vw;
+        object-fit: cover; 
+        cursor: pointer;
+        }
+        .content-text{
+        color: rgb(40, 36, 36,0.8);
+        }
 }
 
 
 // 尾
 .foot{
-width: 100vw;
+    width: 100vw;
+    .foot-info{
+        width: 80vw;
+        margin: 10vh auto;
+        }
 }
-.foot-info{
-width: 80vw;
-margin: 10vh auto;
-}
+
+// 媒体查询
+@media screen and (max-width: 768px) {
+    body{
+        font-size: 12px;
+        // background-color: yellow;
+    }
+
     
+}
