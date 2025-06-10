@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="css/visual.min.css">
     <title>Northmount | Visual</title>
     <style>
+        html,body{
+            scroll-behavior: smooth;
+        }
         .panel {
             display: none;
-            padding: 20px;
+            /* padding: 20px; */
             /* border: 1px solid #ccc; */
             /* border-radius: 4px; */
         }
@@ -29,6 +32,47 @@
         .nav-link:hover {
             background-color: #a8bfd7;
             /* border-radius: 4px; */
+        }
+        .containerx{
+            display: flex;
+            place-content: center;
+            /* place-items: center; */
+            height: 100vh;
+            background-color: #000;
+            color: white;
+        }
+        .scroll-element {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px; ;
+            padding: 24px;
+            justify-content: center;
+            align-items: center;
+            overflow-x: auto;
+
+        }
+        .block {
+            display: inline-block;
+            text-align: center;
+            min-width: 200px;
+            min-height: 200px;
+            line-height: 1.5;
+            color: #ffffff; /* Default text color */
+            animation: scrolling linear;
+            animation-timeline: view();
+            animation-range: entry 0%  cover 50%;
+        }
+        @keyframes scrolling {
+            0% {
+                opacity: 0;
+                scale: 0.5;  
+                transform: translateX(-100px);
+            }   
+            100% {
+                opacity: 1;
+                scale: 1;
+                tansform: translateX(0);
+            }
         }
     </style>
 </head>
@@ -77,70 +121,6 @@
     </div>
     <!-- 图片展示区 -->
     <div class="container mt-4 panel active" id="panel1">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <!-- 卡片 1 -->
-            <div class="col">
-                <div class="card">
-                    <img src="/images/1.jpg" class="card-img-top" alt="ZERODOIS">
-                    <div class="card-body">
-                        <h5 class="card-title">ZERODOIS</h5>
-                        <p class="card-text">Heartline Portugal</p>
-                    </div>
-                </div>
-            </div>
-            <!-- 卡片 2 -->
-            <div class="col">
-                <div class="card">
-                    <img src="/images/2.jpg" class="card-img-top" alt="UNIQODE">
-                    <div class="card-body">
-                        <h5 class="card-title">UNIQODE</h5>
-                        <p class="card-text">品牌标志</p>
-                    </div>
-                </div>
-            </div>
-            <!-- 卡片 3 -->
-            <div class="col">
-                <div class="card">
-                    <img src="/images/3.jpg" class="card-img-top" alt="CLUB PISCINE">
-                    <div class="card-body">
-                        <h5 class="card-title">CLUB PISCINE</h5>
-                        <p class="card-text">卡提恩品牌泳池俱乐部</p>
-                    </div>
-                </div>
-            </div>
-            <!-- 卡片 4 -->
-            <div class="col">
-                <div class="card">
-                    <img src="/images/4.jpg" class="card-img-top" alt="DAWN COIL">
-                    <div class="card-body">
-                        <h5 class="card-title">DAWN COIL</h5>
-                        <p class="card-text">工作年：Rejane Dal Bello</p>
-                    </div>
-                </div>
-            </div>
-            <!-- 卡片 5 -->
-            <div class="col">
-                <div class="card">
-                    <img src="/images/5.jpg" class="card-img-top" alt="Arrow Logo">
-                    <div class="card-body">
-                        <h5 class="card-title">Arrow Logo</h5>
-                        <p class="card-text">技能标志/矢量计算学</p>
-                    </div>
-                </div>
-            </div>
-            <!-- 卡片 6 -->
-            <div class="col">
-                <div class="card">
-                    <img src="/images/6.jpg" class="card-img-top" alt="MAPLE">
-                    <div class="card-body">
-                        <h5 class="card-title">MAPLE</h5>
-                        <p class="card-text">枫木</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container mt-4 panel" id="panel2">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             <!-- 示例：汽车美图内容 -->
             <div class="col">
@@ -271,7 +251,7 @@
             </div>
         </div>
     </div>
-    <div class="container mt-4 panel" id="panel3">
+    <div class="container mt-4 panel" id="panel2">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             <!-- 示例：平面设计内容 -->
             <div class="col">
@@ -375,11 +355,128 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid  panel" id="panel3">
+            <h1>hello</h1>
+            <div class="containerx">
+                <div class="scroll-element">
+                    <div class="block">
+                        <a href="https://www.liuheyu.top">nihao</a></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                </div>      
+            </div>
+    </div>
 
     <!-- 引入 Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
     <!-- 自定义脚本 -->
-    <script src="js/visual.js"></script>
+    <script>
+        const searchLink = document.getElementById('searchLink');
+const aboutLink = document.getElementById('aboutLink');
+const searchBox = document.getElementById('searchBox');
+const aboutBox = document.getElementById('aboutBox');
+
+// 点击“搜索”显示/隐藏搜索框
+searchLink.addEventListener('click', () => {
+    searchBox.style.display = searchBox.style.display === 'block' ? 'none' : 'block';
+    aboutBox.style.display = 'none'; // 隐藏关于板块
+});
+
+// 点击“关于”显示/隐藏关于板块
+aboutLink.addEventListener('click', () => {
+    aboutBox.style.display = aboutBox.style.display === 'block' ? 'none' : 'block';
+    searchBox.style.display = 'none'; // 隐藏搜索框
+});
+// 点击页面其他地方隐藏输入框
+document.addEventListener('click', (event) => {
+    // 如果点击的目标不在 searchBox 和 searchLink 内，隐藏 searchBox
+    if (!searchBox.contains(event.target) && event.target !== searchLink) {
+        searchBox.style.display = 'none';
+    }
+    // 如果点击的目标不在 aboutBox 和 aboutLink 内，隐藏 aboutBox
+    if (!aboutBox.contains(event.target) && event.target !== aboutLink) {
+        aboutBox.style.display = 'none';
+    }
+});
+
+// 点击导航按钮切换板块
+function showPanel(panelId) {
+  // 移除所有板块和按钮的 active 类
+  document.querySelectorAll(".panel").forEach((panel) => {
+    panel.classList.remove("active");
+  });
+  document.querySelectorAll(".nav-button").forEach((button) => {
+    button.classList.remove("active");
+  });
+
+  // 为当前板块和按钮添加 active 类
+  document.getElementById(panelId).classList.add("active");
+  document
+    .querySelector(`a[onclick="showPanel('${panelId}')"]`)
+    .classList.add("active");
+}
+
+// 默认显示第一个板块
+showPanel("panel1");
+
+
+const blocks = document.querySelectorAll(".block");
+blocks.forEach((block) => {
+  // Random background color
+  const randomColor =
+    "#" +
+    Math.floor(Math.random() * 16777215)
+      .toString(16)
+      .padStart(6, "0");
+  block.style.backgroundColor = randomColor;
+
+  // // Random width and height between 50px and 200px
+  // const randomWidth = Math.floor(Math.random() * (200 - 50 + 1)) + 50;
+  // const randomHeight = Math.floor(Math.random() * (200 - 50 + 1)) + 50;
+  // block.style.width = `${randomWidth}px`;
+  // block.style.height = `${randomHeight}px`;
+
+  // Adjust text color based on background luminance
+  const r = parseInt(randomColor.slice(1, 3), 16);
+  const g = parseInt(randomColor.slice(3, 5), 16);
+  const b = parseInt(randomColor.slice(5, 7), 16);
+  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  block.style.color = luminance > 0.5 ? "#000000" : "#FFFFFF";
+});
+    </script>
 </body>
 </html>
