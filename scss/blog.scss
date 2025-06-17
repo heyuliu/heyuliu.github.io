@@ -1,0 +1,14 @@
+#northmount{
+  position: absolute;
+  left:36px;
+  box-shadow: none;
+  border: none;
+  font-size: 24px;
+  color: black;
+}
+@media screen and (max-width: 768px) {
+  #northmount{
+      display: none;
+  }
+                  
+}

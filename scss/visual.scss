@@ -1,23 +1,30 @@
-::-webkit-scrollbar{
+//  sass scss/visual.scss:css/visual.min.css --style=compressed --no-source-map
+::-webkit-scrollbar {
     display: none;
 }
-body {
+
+html, body {
     background-color: #ffffff;
-    color: #a88e8e;
+    color: #3c3636;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
-a{
+
+/* 链接样式 */
+a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 12px;
 }
-/* visual及导航栏样式 */
+
+/* 视觉区域 */
 .visual {
-    background-color: #100f0f;
+    background-color: #ffffff;
+    color: #746F72;
     width: 100vw;
-    height: 42vh;
+    height: 32vh;
     font-size: 16px;
-    position: relative; /* 为 Logo 的绝对定位提供上下文 */
+    position: relative;
     padding: 20px;
 }
 
@@ -27,7 +34,6 @@ a{
     align-items: start;
 }
 
-/* Logo 固定在左上角 */
 .visual-brand {
     font-size: 2rem;
     font-weight: bold;
@@ -37,91 +43,87 @@ a{
     z-index: 10;
 }
 
-/* 导航栏右边的列表 */
+/* 导航栏 */
 .navbar-nav {
     display: flex;
-    flex-direction: column; /* 垂直排列 */
-    align-items: flex-end; /* 靠右对齐 */
-    width: 60vw; /* 列表整体宽度为 60vw */
-    margin-left: auto; /* 推到右侧 */
+    flex-direction: column;
+    align-items: flex-end;
+    width: 60vw;
+    margin-left: auto;
 }
 
-/* 每个 nav-item 的样式 */
 .nav-item {
-    width: 60vw; /* 每个 nav-item 宽度为 60vw */
+    width: 60vw;
     height: 24px;
-    text-align: left; /* 文字靠右对齐 */
-    position: relative; /* 为伪元素提供定位上下文 */
-}
-
-.nav-link {
-    width: 100%; /* 填充整个 nav-item */
-    padding: 5px 15px;
-    display: block; /* 确保链接占满宽度 */
+    text-align: left;
     position: relative;
-    z-index: 1; /* 确保文字在伪元素之上 */
-    transition: color 0.3s ease; /* 平滑过渡文字颜色 */
-    width: 100%; /* 填充整个 nav-item */
-    color: #cfbcbca1;
-    padding: 0px 15px 2px 0px;
-    display: block; /* 确保链接占满宽度 */
 }
 
-/* 尾迹效果 */
 .nav-item::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 0; /* 默认宽度为 0 */
+    width: 0;
     height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); /* 渐变尾迹效果 */
-    transition: width 1.5s ease; /* 宽度过渡动画 */
-    z-index: 0; /* 伪元素在文字之下 */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+    transition: width 1.5s ease;
+    z-index: 0;
 }
 
 .nav-item:hover::before {
-    width: 100%; /* hover 时宽度扩展到 100% */
+    width: 100%;
 }
-.nav-link{
-    padding: 0px 2px;
+
+.nav-link {
+    width: 100%;
+    padding: 0 2px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    color: #993955;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .nav-link:hover {
-    background-color: #918a8a;
-    color: #ffffff; /* 调整 hover 时的文字颜色 */
+    background-color: #a8bfd7;
+    color: #ffffff;
 }
 
+.nav-link.active {
+    background-color: #94979b;
+    color: #4a4949 !important;
+}
 
-
-/* 列表底部链接样式 */
+/* 底部链接 */
 .nav-footer {
     display: flex;
     justify-content: space-between;
     gap: 15px;
-    width: 60vw; /* 与 nav-item 宽度一致 */
-
+    width: 60vw;
 }
 
 .nav-footer-link {
-    color: #ccc;
+    color: #3d3636;
     cursor: pointer;
 }
 
 .nav-footer-link:hover {
-    color: #fff;
+    color: #62cb26;
 }
 
-/* 搜索输入框和关于板块 */
+/* 搜索 & 关于面板 */
 .search-box, .about-box {
     display: none;
     margin-top: 10px;
     padding: 10px;
-    background-color: #2a2a2a;
+    background-color: #b69d9d;
     border-radius: 5px;
-    width: 60vw; /* 与 nav-item 宽度一致 */
+    width: 60vw;
 }
+
 .search-box input {
-    background-color: #333;
+    background-color: #baa1a1;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -159,34 +161,76 @@ a{
     color: #ccc;
 }
 
-/* 响应式调整 */
+/* 可切换面板 */
+.panel {
+    display: none;
+}
+
+.panel.active {
+    display: block;
+}
+
+/* 中央容器和滚动块 */
+.containerx {
+    display: flex;
+    place-content: center;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+}
+
+.scroll-element {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.block {
+    display: inline-block;
+    text-align: center;
+    min-width: 200px;
+    min-height: 200px;
+    line-height: 1.5;
+    color: #ffffff;
+    animation: scrolling linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+
+@keyframes scrolling {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 响应式 */
 @media (max-width: 768px) {
-    .navbar-nav {
-        width: 80%; /* 小屏幕下宽度占满 */
-    }
-
-    .nav-item {
-        width: 100%; /* 小屏幕下宽度占满 */
-    }
-
-    .nav-footer {
-        width: 100%;
-    }
-
-    .search-box, .about-box {
+    .navbar-nav,
+    .nav-item,
+    .nav-footer,
+    .search-box,
+    .about-box {
         width: 100%;
     }
 
     .card-img-top {
         height: 200px;
     }
-
 }
+
 @media (max-width: 576px) {
-    .visual-brand{
+    .visual-brand {
         display: none;
-    }
-    .navbar-nav {
-        width: 100%; /* 小屏幕下宽度占满 */
     }
 }
